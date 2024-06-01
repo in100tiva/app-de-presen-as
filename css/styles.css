@@ -1,0 +1,37 @@
+@import url('components/_variables.css');
+@import url('components/_base.css');
+@import url('components/_header.css');
+@import url('components/_form.css');
+@import url('components/_modal.css');
+@import url('components/_notification.css');
+
+main {
+    padding: var(--padding);
+}
+
+#dashboard-section {
+    display: none;
+}
+
+#chart-container {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+#attendance-list, #report-section {
+    margin-top: 2rem;
+}
+
+#attendance-list div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--margin);
+}
+
+#report-output {
+    margin-top: var(--margin);
+    padding: var(--padding);
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    background-color: var(--secondary-color);
+}

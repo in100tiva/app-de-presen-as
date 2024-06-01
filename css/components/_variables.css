@@ -1,0 +1,11 @@
+:root {
+    --primary-color: #333;
+    --secondary-color: #fff;
+    --background-color: #f4f4f4;
+    --success-color: #4caf50;
+    --error-color: #f44336;
+    --font-family: Arial, sans-serif;
+    --border-radius: 5px;
+    --padding: 1rem;
+    --margin: 0.5rem;
+}

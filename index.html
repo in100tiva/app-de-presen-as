@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Presenças</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gerenciamento de Presenças</h1>
+    </header>
+    <main>
+        <section id="login-section">
+            <h2>Login</h2>
+            <form id="login-form">
+                <input type="text" id="username" placeholder="Usuário" required>
+                <input type="password" id="password" placeholder="Senha" required>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+        <section id="dashboard-section" style="display: none;">
+            <h2>Dashboard</h2>
+            <button id="logout-button">Logout</button>
+            <div id="chart-container">
+                <!-- Gráfico de Pizza -->
+                <canvas id="attendance-chart"></canvas>
+            </div>
+            <div id="class-management">
+                <h3>Cadastrar Turma</h3>
+                <form id="class-form">
+                    <input type="text" id="class-name" placeholder="Nome da Turma" required>
+                    <button type="submit">Cadastrar</button>
+                </form>
+                <h3>Cadastrar Aluno</h3>
+                <form id="student-form">
+                    <input type="text" id="student-name" placeholder="Nome do Aluno" required>
+                    <select id="class-select" required>
+                        <!-- Options serão preenchidas pelo JavaScript -->
+                    </select>
+                    <button type="submit">Cadastrar</button>
+                </form>
+            </div>
+            <div id="attendance-list">
+                <h3>Lista de Presenças</h3>
+                <label for="filter-class-select">Filtrar por Turma:</label>
+                <select id="filter-class-select">
+                    <option value="all">Todas as Turmas</option>
+                    <!-- Options serão preenchidas pelo JavaScript -->
+                </select>
+                <!-- Lista de Presenças -->
+            </div>
+            <div id="report-section">
+                <h3>Gerar Relatório</h3>
+                <form id="report-form">
+                    <select id="student-select">
+                        <!-- Options serão preenchidas pelo JavaScript -->
+                    </select>
+                    <button type="submit">Gerar Relatório</button>
+                </form>
+                <div id="report-output">
+                    <!-- Relatório será exibido aqui -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal para editar aluno -->
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Editar Nome do Aluno</h2>
+            <form id="edit-student-form">
+                <input type="text" id="edit-student-name" placeholder="Nome do Aluno" required>
+                <button type="submit">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Área de notificações -->
+    <div id="notification" class="notification"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

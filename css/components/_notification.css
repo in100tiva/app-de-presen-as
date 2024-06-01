@@ -1,0 +1,15 @@
+.notification {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--success-color);
+    color: var(--secondary-color);
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+    z-index: 1000;
+}
+
+.notification.error {
+    background-color: var(--error-color);
+}
